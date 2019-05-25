@@ -1,0 +1,84 @@
+#include<iostream>
+#include <conio.h>
+
+using namespace std;
+
+int add(int x,int k)
+{
+	int c;
+	c = x+k;
+	cout << "Sum = " << c;
+}
+int sub(int x,int k)
+{
+	int c;
+	c = x-k;
+	cout << "Difference = " << c;
+}
+int mult(int x,int k)
+{
+	int c;
+	c = x*k;
+	cout << "Product = " << c;
+}
+int div(int x,int k)
+{
+	int c;
+	c = x/k;
+	cout << "Quotient = " << c;
+}
+int modual(int x,int k)
+{
+	int c;
+	c = x%k;
+	cout << "Remainder = " << c;
+}
+
+int main()
+{
+	int a, b, c, addition, subtraction, multiplication, division, modulus;
+	char s;
+	do
+{
+	cout << "1. Addition" << endl;
+  cin >> addition;
+	cout << "2. Subtraction" << endl;
+  cin >> subtraction;
+	cout << "3. Multiplication" << endl;
+  cin >> multiplication;
+	cout << "4. Division" << endl;
+  cin >> division;
+	cout << "5. Modulus" << endl;
+  cin >> modulus;
+	cout << endl << "Choose the operation you want to perform : " << endl; 
+  cin >> a;
+	cout << endl << "Enter Two Value : " << endl; 
+  cin >> b >> c;
+  
+	switch(a)
+{
+	case 1:
+	add(b,c);
+	break;
+	case 2:
+	sub(b,c);
+	break;
+	case 3:
+	mult(b,c);
+	break;
+	case 4:
+	div(b,c);
+	break;
+	case 5:
+	modual(b,c);
+	break;
+	default:
+	cout << "Invalid Option";
+}
+	cout << endl << endl << "Continue? .. Y/N : " << endl; 
+  cin >> s;
+}
+while(s == 'Y'||s=='y');
+	_getch();
+	return 0;
+}
