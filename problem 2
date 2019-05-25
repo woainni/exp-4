@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+ 
+using namespace std;
+ 
+int main()
+{
+	int a[50], j, n, i, temperature;
+  
+  
+	  cout << "Enter size of Array: " << endl;
+	  cin >> n;
+    
+  	cout << "Enter elements: " << endl; 
+	
+	for(i=0; i < n; ++i)
+  
+		cin >> a[i];
+		
+	for (i=1; i < n; ++i)
+	{
+		for (j=0; j < (n - i); ++j)
+    
+			if (a[j] > a[j+1])
+      
+			{
+      
+			temperature = a[j];
+      
+				a[j] = a[j+1];
+        
+				a[j+1] = temperature;
+        
+			}
+	}
+	
+	  cout << "Array after bubble sort:" << endl;
+    
+	for (i=0; i < n; ++i);
+  
+		cout << " " << a[i] << endl;
+    
+    
+    
+	_getch();
+	return 0;
+}
