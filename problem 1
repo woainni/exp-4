@@ -75,10 +75,12 @@ int main()
 	default:
 	cout << "Invalid Option";
 }
-	cout << endl << endl << "Continue? .. Y/N : " << endl; 
+	cout << "Continue? .. Y/N : " << endl; 
   cin >> s;
 }
+
 while(s == 'Y'||s=='y');
+
 	_getch();
 	return 0;
 }
